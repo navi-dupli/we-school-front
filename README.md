@@ -102,8 +102,8 @@ material-dashboard-angular
 │   │   │   ├── footer
 │   │   │   │   ├── footer.component.css
 │   │   │   │   ├── footer.component.html
-│   │   │   │   ├── footer.component.spec.ts
-│   │   │   │   └── footer.component.ts
+│   │   │   │   ├── custom-button.component.spec.ts
+│   │   │   │   └── custom-button.component.ts
 │   │   │   ├── navbar
 │   │   │   │   ├── navbar.component.css
 │   │   │   │   ├── navbar.component.html
@@ -160,8 +160,8 @@ material-dashboard-angular
 │   │   └── user-profile
 │   │       ├── user-profile.component.css
 │   │       ├── user-profile.component.html
-│   │       ├── list-users.component.spec.ts
-│   │       └── list-users.component.ts
+│   │       ├── create-users.component.spec.ts
+│   │       └── create-users.component.ts
 │   ├── assets
 │   │   ├── css
 │   │   │   └── demo.css

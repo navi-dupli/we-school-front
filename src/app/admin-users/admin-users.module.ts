@@ -9,6 +9,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import {ListUsersComponent} from "./list-users/list-users.component";
 import {AdminUsersComponent} from "./admin-users.component";
+import {CreateUsersComponent} from "./create-users/create-users.component";
+import {ComponentsModule} from "../components/components.module";
 
 @NgModule({
   imports: [
@@ -21,10 +23,12 @@ import {AdminUsersComponent} from "./admin-users.component";
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    ComponentsModule,
   ],
   declarations: [
     AdminUsersComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    CreateUsersComponent
   ]
 })
 
