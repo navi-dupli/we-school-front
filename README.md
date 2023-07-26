@@ -145,8 +145,8 @@ material-dashboard-angular
 │   │   ├── table-list
 │   │   │   ├── table-list.component.css
 │   │   │   ├── table-list.component.html
-│   │   │   ├── table-list.component.spec.ts
-│   │   │   └── table-list.component.ts
+│   │   │   ├── admin-grades.component.spec.ts
+│   │   │   └── admin-grades.component.ts
 │   │   ├── typography
 │   │   │   ├── typography.component.css
 │   │   │   ├── typography.component.html
@@ -160,8 +160,8 @@ material-dashboard-angular
 │   │   └── user-profile
 │   │       ├── user-profile.component.css
 │   │       ├── user-profile.component.html
-│   │       ├── user-profile.component.spec.ts
-│   │       └── user-profile.component.ts
+│   │       ├── list-users.component.spec.ts
+│   │       └── list-users.component.ts
 │   ├── assets
 │   │   ├── css
 │   │   │   └── demo.css
