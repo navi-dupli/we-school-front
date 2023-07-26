@@ -160,8 +160,8 @@ material-dashboard-angular
 │   │   └── user-profile
 │   │       ├── user-profile.component.css
 │   │       ├── user-profile.component.html
-│   │       ├── create-users.component.spec.ts
-│   │       └── create-users.component.ts
+│   │       ├── create-grade.component.spec.ts
+│   │       └── create-grade.component.ts
 │   ├── assets
 │   │   ├── css
 │   │   │   └── demo.css
