@@ -18,4 +18,14 @@ export class UsersService {
     return this.http
         .post<any>(this.apiURL + '/createUser', body)
   }
+
+  getUser(userId: string) {
+    return this.http
+        .get<any>(this.apiURL + `/get-user/${userId}`)
+  }
+
+  updateUser(body: any, userId: string) {
+    return this.http
+        .post<any>(this.apiURL + `/modifyUser/${userId}`, body)
+  }
 }

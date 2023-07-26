@@ -73,7 +73,10 @@
                               </div>
                           </div>
 
-                          <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="createUser()">Registrar</button>
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="createUser()">
+                              <span *ngIf="!userId">Registrar</span>
+                              <span *ngIf="userId">Editar</span>
+                          </button>
                           <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="cancel()">Cancelar</button>
                           <div class="clearfix"></div>
                       </form>

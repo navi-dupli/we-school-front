@@ -8,6 +8,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {CustomButtonComponent} from "./custom-button/custom-button.component";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import {CustomDialogComponent} from "./custom-dialog/custom-button.component";
 
 @NgModule({
   imports: [
@@ -20,13 +21,15 @@ import {MatButtonModule} from "@angular/material/button";
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    CustomButtonComponent
+    CustomButtonComponent,
+    CustomDialogComponent
   ],
   exports: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    CustomButtonComponent
+    CustomButtonComponent,
+    CustomDialogComponent
   ]
 })
 export class ComponentsModule { }
