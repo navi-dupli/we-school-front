@@ -14,16 +14,16 @@
                       <h4 class="card-title">Crear grado</h4>
                   </div>
                   <div class="card-body">
-                      <form>
+                      <form [formGroup]="form" (ngSubmit)="onSubmit()">
                           <div class="row">
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Código" type="text">
+                                  <input matInput placeholder="Código" type="text" formControlName="code">
                                 </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Nombre" type="text">
+                                  <input matInput placeholder="Nombre" type="text" formControlName="name">
                                 </mat-form-field>
                               </div>
                           </div>

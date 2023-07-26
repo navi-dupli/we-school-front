@@ -13,4 +13,9 @@ export class GradesService {
     return this.http
       .get<any>(this.apiURL + '/grades')
   }
+
+  saveGrade(data: any) {
+    return this.http
+      .post(this.apiURL + '/createGrade', data);
+  }
 }
