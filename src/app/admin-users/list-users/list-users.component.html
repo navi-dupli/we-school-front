@@ -34,6 +34,9 @@
                               <th>
                                   Estado
                               </th>
+                              <th>
+                                  Acciones
+                              </th>
                               </thead>
                               <tbody>
                                   <tr *ngFor="let user of users">
@@ -51,6 +54,11 @@
                                       </td>
                                       <td>
                                           {{user.local.status}}
+                                      </td>
+                                      <td>
+                                          <button mat-fab class="pull-right" (click)="editUser(user)">
+                                              <mat-icon>edit</mat-icon>
+                                          </button>
                                       </td>
                                   </tr>
                               </tbody>

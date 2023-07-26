@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../../services/users/users.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-list-users',
@@ -8,7 +9,8 @@ import {UsersService} from '../../services/users/users.service';
 })
 export class ListUsersComponent implements OnInit {
   users = [];
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService,
+              private router: Router) { }
 
   ngOnInit() {
     this.getUsers();
@@ -18,6 +20,10 @@ export class ListUsersComponent implements OnInit {
     this.usersService.getUsers().subscribe((data) => {
       this.users = data.users;
     })
+  }
+
+  editUser(user) {
+    this.router.navigateByUrl(`/editar-usuario/${user._id}`);
   }
 
 }

@@ -8,6 +8,7 @@ import {CreateGradeComponent} from '../../admin-grades/create-grade/create-grade
 export const AdminLayoutRoutes: Routes = [
     { path: 'usuarios',   component: AdminUsersComponent },
     { path: 'crear-usuario', component: CreateUsersComponent },
+    { path: 'editar-usuario/:id', component: CreateUsersComponent },
     { path: 'grados',     component: AdminGradesComponent },
     { path: 'crear-grado',     component: CreateGradeComponent },
 ];

@@ -42,4 +42,8 @@ export class CreateUsersComponent implements OnInit {
       }
     });
   }
+
+  cancel() {
+    this.router.navigateByUrl('/usuarios');
+  }
 }
