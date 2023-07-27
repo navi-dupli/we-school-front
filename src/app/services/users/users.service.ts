@@ -28,4 +28,10 @@ export class UsersService {
     return this.http
         .post<any>(this.apiURL + `/modifyUser/${userId}`, body)
   }
+
+  deleteUser(userId: string) {
+    console.log('aaaa', userId)
+    return this.http
+        .get<any>(this.apiURL + `/destroyUser/${userId}`)
+  }
 }

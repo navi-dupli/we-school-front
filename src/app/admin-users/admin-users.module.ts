@@ -12,6 +12,7 @@ import {AdminUsersComponent} from "./admin-users.component";
 import {CreateUsersComponent} from "./create-users/create-users.component";
 import {ComponentsModule} from "../components/components.module";
 import {MatIconModule} from "@angular/material/icon";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import {MatIconModule} from "@angular/material/icon";
     MatTooltipModule,
     ComponentsModule,
     MatIconModule,
+    MatDialogModule
   ],
   declarations: [
     AdminUsersComponent,

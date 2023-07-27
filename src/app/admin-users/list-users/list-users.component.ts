@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../../services/users/users.service';
 import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
+import {CustomDialogComponent} from "../../components/custom-dialog/custom-dialog.component";
 
 @Component({
   selector: 'app-list-users',
@@ -29,7 +30,15 @@ export class ListUsersComponent implements OnInit {
   }
 
   deleteUser(user) {
+    const dialogRef = this.dialog.open(CustomDialogComponent, {
+      data: {user},
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      this.usersService.deleteUser(result.user._id).subscribe(data => {
+        this.router.navigateByUrl(`/usuarios`);
+      });
+    });
   }
 
 }

@@ -103,7 +103,7 @@ material-dashboard-angular
 │   │   │   │   ├── footer.component.css
 │   │   │   │   ├── footer.component.html
 │   │   │   │   ├── custom-dialog.component.spec.ts
-│   │   │   │   └── custom-button.component.ts
+│   │   │   │   └── custom-dialog.component.ts
 │   │   │   ├── navbar
 │   │   │   │   ├── navbar.component.css
 │   │   │   │   ├── navbar.component.html
