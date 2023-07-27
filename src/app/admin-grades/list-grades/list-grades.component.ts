@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {GradesService} from '../../services/grades/grades.service';
+import {CustomDialogComponent} from '../../components/custom-dialog/custom-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-list-grades',
@@ -9,7 +12,7 @@ import {GradesService} from '../../services/grades/grades.service';
 export class ListGradesComponent implements OnInit {
 
   degrees = [];
-  constructor(private gradesService: GradesService) { }
+  constructor(private gradesService: GradesService,  public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
     this.getDegrees()
@@ -21,4 +24,20 @@ export class ListGradesComponent implements OnInit {
     })
   }
 
+  deleteGrade(grade: any) {
+    const dialogRef = this.dialog.open(CustomDialogComponent, {
+      data: {grade},
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.gradesService.deleteGrade(result._id).subscribe((data: any) => {
+        if (data.success) {
+          this.getDegrees();
+        }
+      })
+    });
+  }
+
+  editGrade(grade: any) {
+    this.router.navigateByUrl(`/editar-grado/${grade._id}`);
+  }
 }

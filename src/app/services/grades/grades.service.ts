@@ -14,8 +14,23 @@ export class GradesService {
       .get<any>(this.apiURL + '/grades')
   }
 
+  getGrade(id: string) {
+    return this.http
+      .get(this.apiURL + `/get-grade/${id}`);
+  }
+
   saveGrade(data: any) {
     return this.http
       .post(this.apiURL + '/createGrade', data);
+  }
+
+  updateGrade(data: any, id: string) {
+    return this.http
+      .post(this.apiURL + `/modifyGrade/${id}`, data);
+  }
+
+  deleteGrade(id: string) {
+    return this.http
+      .get(this.apiURL + `/destroyGrade/${id}`);
   }
 }

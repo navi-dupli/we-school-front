@@ -11,6 +11,7 @@ import {ListGradesComponent} from './list-grades/list-grades.component';
 import {AdminGradesComponent} from './admin-grades.component';
 import {ComponentsModule} from '../components/components.module';
 import {CreateGradeComponent} from './create-grade/create-grade.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import {CreateGradeComponent} from './create-grade/create-grade.component';
     MatSelectModule,
     MatTooltipModule,
     ComponentsModule,
+    MatIconModule,
   ],
   declarations: [
     AdminGradesComponent,

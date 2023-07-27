@@ -11,4 +11,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'editar-usuario/:id', component: CreateUsersComponent },
     { path: 'grados',     component: AdminGradesComponent },
     { path: 'crear-grado',     component: CreateGradeComponent },
+    { path: 'editar-grado/:id', component: CreateGradeComponent },
 ];
