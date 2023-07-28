@@ -29,7 +29,7 @@ export class ListGradesComponent implements OnInit {
       data: {grade},
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.gradesService.deleteGrade(result._id).subscribe((data: any) => {
+      this.gradesService.deleteGrade(result.grade._id).subscribe((data: any) => {
         if (data.success) {
           this.getDegrees();
         }

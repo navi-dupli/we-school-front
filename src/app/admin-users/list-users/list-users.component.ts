@@ -36,7 +36,9 @@ export class ListUsersComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       this.usersService.deleteUser(result.user._id).subscribe(data => {
-        this.router.navigateByUrl(`/usuarios`);
+        if (data.success) {
+          this.getUsers();
+        }
       });
     });
   }
